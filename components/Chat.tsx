@@ -32,7 +32,7 @@ export default function RoomPage() {
   const connectWebSocket = (roomIdToJoin: string, passwordToUse: string) => {
     setIsConnecting(true)
     setError(null)
-    const socketUrl = process.env.NEXT_PUBLIC_WEBSOCKET_LINK || 'ws://localhost:8080';
+    const socketUrl = process.env.WEBSOCKET_LINK || 'ws://localhost:8080';
     socketRef.current = new WebSocket(socketUrl)
 
     socketRef.current.onopen = () => {
