@@ -32,7 +32,8 @@ export default function RoomPage() {
   const connectWebSocket = (roomIdToJoin: string, passwordToUse: string) => {
     setIsConnecting(true)
     setError(null)
-    socketRef.current = new WebSocket(process.env.WEBSOCKET_LINK!)
+    const socketUrl = process.env.NEXT_PUBLIC_WEBSOCKET_LINK || 'ws://localhost:8080';
+    socketRef.current = new WebSocket(socketUrl)
 
     socketRef.current.onopen = () => {
       console.log('Connected to WebSocket server')
