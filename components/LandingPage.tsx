@@ -67,6 +67,9 @@ const PriverseLanding = () => {
         </motion.p>
         
         <div className="flex justify-center mb-8">
+          <div>
+            
+          </div>
         <Button
   onClick={handleGetStarted}
   className="text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
